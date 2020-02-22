@@ -1,4 +1,4 @@
-<video id="myVideo" controls></video>
+<video id="myVideo" controls src="{{src}}"></video>
 
 <view class="danmuArea">
   <input type="text" placeholder="请输入弹幕内容"></input>
@@ -6,7 +6,7 @@
 </view>
 
 <view class="videoList">
-  <view class="videoBar" wx:for="{{list}}" wx:key="video{{index}}">
+  <view class="videoBar" wx:for="{{list}}" wx:key="index" data-url="{{item.videoUrl}}" bindtap="playVideo">
     <image src="/images/play.png"></image>
     <text>{{item.title}}</text>
   </view>
