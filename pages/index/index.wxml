@@ -6,8 +6,8 @@
 </view>
 
 <view class="videoList">
-  <view class="videoBar">
+  <view class="videoBar" wx:for="{{list}}" wx:key="video{{index}}">
     <image src="/images/play.png"></image>
-    <text>测试第一个文字</text>
+    <text>{{item.title}}</text>
   </view>
 </view>

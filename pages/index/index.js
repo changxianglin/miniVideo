@@ -4,6 +4,28 @@ const app = getApp()
 
 Page({
   data: {
+    list: [
+      {
+        id: '123',
+        title: '第一个视频',
+        // videoUrl: ''
+      },
+      {
+        id: '456',
+        title: '第二个视频',
+        // videoUrl: ''
+      },
+      {
+        id: '789',
+        title: '第三个视频',
+        // videoUrl: ''
+      },
+      {
+        id: '147',
+        title: '第四个视频',
+        // videoUrl: ''
+      }
+    ],
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
