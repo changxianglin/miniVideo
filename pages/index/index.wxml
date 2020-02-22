@@ -1,0 +1,13 @@
+<video id="myVideo" controls></video>
+
+<view class="danmuArea">
+  <input type="text" placeholder="请输入弹幕内容"></input>
+  <button>发送弹幕</button>
+</view>
+
+<view class="videoList">
+  <view class="videoBar">
+    <image src="/images/play.png"></image>
+    <text>测试第一个文字</text>
+  </view>
+</view>
