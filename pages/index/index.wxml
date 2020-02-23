@@ -1,8 +1,8 @@
-<video id="myVideo" controls src="{{src}}"></video>
+<video id="myVideo" controls src="{{src}}" enable-danmu="true" danmu-btn="true"></video>
 
 <view class="danmuArea">
-  <input type="text" placeholder="请输入弹幕内容"></input>
-  <button>发送弹幕</button>
+  <input type="text" placeholder="请输入弹幕内容" bindinput="getDanmu"></input>
+  <button bindtap="sendDanmu">发送弹幕</button>
 </view>
 
 <view class="videoList">

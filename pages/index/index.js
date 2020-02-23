@@ -2,9 +2,21 @@
 //获取应用实例
 const app = getApp()
 
+function getRandomColor() {
+  let rgb = []
+  
+  for (let i = 0; i < 3; i++) {
+    let color = Math.floor(Math.random() * 256).toString(16)
+    color = (color.length === 1) ? '0' + color : color
+    rgb.push(color)
+  }
+  return '#' + rgb.join('')
+}
+
 Page({
   data: {
     src: '',
+    danmuTxt: '',
     list: [
       {
         id: '123',
@@ -31,6 +43,18 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
+  },
+  getDanmu: function(e) {
+    this.setData({
+      danmuTxt: e.detail.value
+    })
+  },
+  sendDanmu: function(e) {
+    let text = this.data.danmuTxt
+    this.videoCtx.sendDanmu({
+      text: text,
+      color: getRandomColor()
+    })
   },
   //事件处理函数
   bindViewTap: function() {
